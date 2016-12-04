@@ -17,10 +17,48 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    useLibrary 'org.apache.http.legacy'
+
+    // 友盟多渠道打包
+    productFlavors {
+        wandoujia {}  //豌豆荚
+        c360 {}    //360
+        vivo {}     //vivo
+        pphelper {}  //pp助手
+        tencent {}   //腾讯
+        baidu {}   //百度
+        xiaomi {}   //小米
+        _91helper {}   //91助手
+        androidmarket {}   //安卓市场
+        other {}   //其他
+    }
+
+    productFlavors.all { flavor ->
+        flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+}
+
+repositories{
+    flatDir {
+        dirs 'libs'
+    }
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.1.1'
+    compile files('libs/xUtils-2.6.14.jar')
+    compile files('libs/okhttp-2.4.0.jar')
+    compile files('libs/BmobSDK_V3.4.6_0415.jar')
+    compile files('libs/okio-1.4.0.jar')
+    compile files('libs/hyphenatechat_3.1.4.jar')
+    compile files('libs/utdid4all-1.0.4.jar')
+    compile files('libs/org.apache.http.legacy.jar')
+    compile files('libs/umeng-analytics-v6.0.1.jar')
+    compile(name: 'SMSSDK-2.1.2', ext: 'aar')
+    compile(name: 'SMSSDKGUI-2.1.2', ext: 'aar')
+    compile files('libs/MobCommons-2016.0707.1708.jar')
+    compile files('libs/MobTools-2016.0707.1708.jar')
 }
