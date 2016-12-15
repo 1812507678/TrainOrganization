@@ -6,21 +6,9 @@
     tools:context=".activity.HomeActivity"
     >
 
-    <RelativeLayout
-        android:id="@+id/rl_home_top"
-        android:layout_width="fill_parent"
-        android:layout_height="45dp"
-        android:background="#FFFFFF" >
-
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:gravity="center"
-            android:text="主页"
-            android:textColor="#000"
-            android:textSize="20sp"
-            android:textStyle="bold"/>
-    </RelativeLayout>
+    <include layout="@layout/base_head"
+        android:id="@+id/rl_base_head">
+    </include>
 
 
 
@@ -126,16 +114,11 @@
                 android:layout_marginBottom="5dp"/>
         </LinearLayout>
     </LinearLayout>
-    <View
-        android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#F4F4F4"
-        android:layout_above="@id/ll_home_bottom"/>
 
     <hainu.com.trainorganization.util.MyViewPager
         android:id="@+id/vp_home_page"
-        android:layout_above="@id/view"
+        android:layout_below="@id/rl_base_head"
+        android:layout_above="@id/ll_home_bottom"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     </hainu.com.trainorganization.util.MyViewPager>
