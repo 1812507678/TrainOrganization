@@ -7,47 +7,7 @@
     android:background="#F4F4F4"
     android:orientation="vertical">
 
-    <RelativeLayout
-        android:id="@+id/rl_home_top"
-        android:layout_width="fill_parent"
-        android:layout_height="45dp"
-        android:background="#FFFFFF" >
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#F4F4F4"
-            android:layout_alignParentTop="true"></View>
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:gravity="center"
-            android:text="个人中心"
-            android:textColor="#000000"
-            android:textSize="20sp"/>
 
-        <LinearLayout
-            android:id="@+id/ll_me_setting"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:background="@drawable/bg_text_setting"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="10dp"
-            android:padding="5dp">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_settings_black_24dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="设置"/>
-        </LinearLayout>
-
-
-    </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/ll_user_container"
@@ -62,6 +22,27 @@
             android:layout_height="100dp"
             android:background="#FFFFFF"
             android:clickable="true" >
+
+            <LinearLayout
+                android:id="@+id/ll_me_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@drawable/bg_text_setting"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="10dp"
+                android:padding="5dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_settings_black_24dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设置"/>
+            </LinearLayout>
 
             <hainu.com.trainorganization.view.CircleImageView
                 android:id="@+id/cv_me_icon"
@@ -123,10 +104,31 @@
         </LinearLayout>
     </LinearLayout>
 
+    <RelativeLayout
+        android:id="@+id/ll_me_allbeans"
+        style="@style/option_item_rl"
+        android:layout_marginTop="20dp">
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/pacman"/>
+        <TextView
+            style="@style/option_item_text"
+            android:text="总金豆值"
+            android:layout_toRightOf="@+id/iv_image"
+            android:layout_marginLeft="5dp"/>
+        <TextView
+            style="@style/option_item_text"
+            android:text="50000"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
     <LinearLayout
         android:id="@+id/ll_me_personinf"
         style="@style/option_item_rl"
-        android:layout_marginTop="20dp" >main_tab_tribune_select.9
+        android:layout_marginTop="10dp" >
         <ImageView
             android:layout_width="25dp"
             android:layout_height="25dp"
@@ -136,6 +138,8 @@
             android:text="个人信息"
             android:layout_marginLeft="5dp"/>
     </LinearLayout>
+
+
 
     <View
         android:layout_width="match_parent"
@@ -147,10 +151,10 @@
         <ImageView
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:src="@drawable/menu_about_logo"/>
+            android:src="@drawable/shopping"/>
         <TextView
             style="@style/option_item_text"
-            android:text="申请记录"
+            android:text="金豆商城"
             android:layout_marginLeft="5dp"/>
     </LinearLayout>
 

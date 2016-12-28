@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="zhiyuan.com.flowers.activity.AccountnfoActivity">
+    tools:context=".activity.AccountnfoActivity">
 
     <RelativeLayout
         android:id="@+id/rl_home_top"
@@ -52,7 +52,7 @@
             android:textSize="15sp"
             android:layout_centerVertical="true"/>
 
-        <hainu.com.adultloan.view.CircleImageView
+        <hainu.com.trainorganization.view.CircleImageView
             android:id="@+id/iv_personcenter_iocn"
             android:layout_width="80dp"
             android:layout_height="80dp"

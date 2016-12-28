@@ -21,9 +21,11 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+import cn.sharesdk.onekeyshare.OnekeyShare;
 import hainu.com.trainorganization.R;
 import hainu.com.trainorganization.activity.AcceptPushActivity;
 import hainu.com.trainorganization.activity.AccountnfoActivity;
+import hainu.com.trainorganization.activity.AwardMallActivity;
 import hainu.com.trainorganization.activity.CollectArticleActivity;
 import hainu.com.trainorganization.activity.LoginActivity;
 import hainu.com.trainorganization.activity.SettingActivity;
@@ -213,19 +215,19 @@ public class MePageFragment extends Fragment {
                         startActivity(new Intent(getActivity(),LoginActivity.class));
                     }
                     break;
-                /*case R.id.ll_me_invite:
+                case R.id.ll_me_invite:
 
                     share();
-                    break;*/
+                    break;
                 case R.id.ll_me_applyhis:
-                    //startActivity(new Intent(getActivity(), LookupApplyActivity.class));
+                    startActivity(new Intent(getActivity(), AwardMallActivity.class));
 
                     break;
             }
         }
     }
 
-    /*private void share() {
+    private void share() {
         OnekeyShare oks = new OnekeyShare();
         //关闭sso授权
         oks.disableSSOWhenAuthorize();
@@ -233,7 +235,7 @@ public class MePageFragment extends Fragment {
         // 分享时Notification的图标和文字  2.5.9以后的版本不调用此方法
         //oks.setNotification(R.drawable.ic_launcher, getString(R.string.app_name));
         // title标题，印象笔记、邮箱、信息、微信、人人网和QQ空间使用
-        oks.setTitle("58名校贷，专业的大学生贷款软件");
+        oks.setTitle("教育");
         // titleUrl是标题的网络链接，仅在人人网和QQ空间使用
         oks.setTitleUrl(apkUrl);
         // text是分享文本，所有平台都需要这个字段
@@ -258,7 +260,7 @@ public class MePageFragment extends Fragment {
         // 启动分享GUI
         oks.show(getActivity());
     }
-*/
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode== Activity.RESULT_OK && requestCode==120){
